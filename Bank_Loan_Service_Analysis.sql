@@ -266,69 +266,70 @@ FROM financial_loan
 -- Monthly loan issued
 
 SELECT 
-	MONTH(B.issue_date) "Month Number",
-	DATENAME(MONTH, B.issue_date) AS "Month of Loan issue",
-	COUNT(B.id) AS "Total loan Application",
-	SUM (B.loan_amount) AS "Total Loan Disbursed"
-FROM Bank_loan_data B
-GROUP BY MONTH(B.issue_date), DATENAME(MONTH, B.issue_date)
-ORDER BY MONTH(B.issue_date);
+	MONTH(`Issue Date`) "Month Number",
+	MONTHNAME(`Issue Date`) "Month of Loan issue",
+	COUNT(Id) "Total loan Application",
+	SUM(`Loan Amount`) "Total Loan Disbursed"
+FROM financial_loan
+	GROUP BY MONTH(`Issue Date`), MONTHNAME(`Issue Date`)
+	ORDER BY MONTH(`Issue Date`);
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Regional Analysis by state
+
 SELECT 
-	B.address_state,
-	COUNT(B.id) AS "Total loan Application",
-	SUM (B.loan_amount) AS "Total Loan Disbursed"
-FROM Bank_loan_data B
-GROUP BY B.address_state
-ORDER BY SUM (B.loan_amount) DESC;
+	`ï»¿Address State`,
+	COUNT(Id) "Total loan Application",
+	SUM(`Loan Amount`) AS "Total Loan Disbursed"
+FROM financial_loan
+	GROUP BY `ï»¿Address State`
+	ORDER BY SUM(`Loan Amount`) DESC;
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Total Applications by Term
 
 SELECT 
-	B.term,
-	COUNT(B.id) AS "Total loan Application",
-	SUM (B.loan_amount) AS "Total Loan Disbursed"
-FROM Bank_loan_data B
-GROUP BY B.term
-ORDER BY SUM (B.loan_amount) DESC;
+	Term,
+	COUNT(Id) "Total loan Application",
+	SUM(`Loan Amount`) "Total Loan Disbursed"
+FROM financial_loan
+	GROUP BY Term
+	ORDER BY `Total Loan Disbursed` DESC;
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Total Applications by Employee Length
 
 SELECT 
-	B.emp_length,
-	COUNT(B.id) AS "Total loan Application",
-	SUM (B.loan_amount) AS "Total Loan Disbursed"
-FROM Bank_loan_data B
-GROUP BY B.emp_length
-ORDER BY SUM (B.loan_amount) DESC;
+	`Emp Length`,
+	COUNT(Id) "Total loan Application",
+	SUM(`Loan Amount`) "Total Loan Disbursed"
+FROM financial_loan
+	GROUP BY `Emp Length`
+	ORDER BY SUM(`Loan Amount`) DESC;
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Total Applications by Purpose
 
 SELECT 
-	B.purpose,
-	COUNT(B.id) AS "Total loan Application",
-	SUM (B.loan_amount) AS "Total Loan Disbursed"
-FROM Bank_loan_data B
-	GROUP BY B.purpose
-	ORDER BY SUM (B.loan_amount) DESC;
+	Purpose,
+	COUNT(Id) AS "Total loan Application",
+	SUM(`Loan Amount`) "Total Loan Disbursed"
+FROM financial_loan
+	GROUP BY Purpose
+	ORDER BY SUM(`Loan Amount`) DESC;
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Total Applications by home ownership
 
 SELECT 
-	B.home_ownership,
-	COUNT(B.id) AS "Total loan Application",
-	SUM (B.loan_amount) AS "Total Loan Disbursed"
-FROM Bank_loan_data B
-	GROUP BY B.home_ownership
-	ORDER BY SUM (B.loan_amount) DESC;
+	`Home Ownership`,
+	COUNT(Id) "Total loan Application",
+	SUM(`Loan Amount`) "Total Loan Disbursed"
+FROM financial_loan
+	GROUP BY `Home Ownership`
+	ORDER BY SUM(`Loan Amount`) DESC;
