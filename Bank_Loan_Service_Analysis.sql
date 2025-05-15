@@ -225,41 +225,41 @@ FROM financial_loan
 -- Loan status grid view
 
 SELECT 
-	B.loan_status,
-	COUNT(B.id) AS "Total loan Application",
-	SUM (B.loan_amount) AS "Total Loan Disbursed",
-	ROUND(AVG(B.int_rate*100),4) AS "Average Interest Rate",
-	ROUND(AVG(B.dti*100),4) AS "Average dti"
-FROM Bank_loan_data B
-GROUP BY B.loan_status;
+	`Loan Status`,
+	COUNT(`Id`) "Total loan Application",
+	SUM(`Loan Amount`) "Total Loan Disbursed",
+	ROUND(AVG(`Int Rate`*100),4) AS "Average Interest Rate",
+	ROUND(AVG(`DTI`*100),4) AS "Average dti"
+FROM financial_loan F
+	GROUP BY `Loan Status`;
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- MTD Loan status grid view
 
 SELECT 
-	B.loan_status,
-	COUNT(B.id) AS "MTD Total loan Application",
-	SUM (B.loan_amount) AS "MTD Total Loan Disbursed",
-	ROUND(AVG(B.int_rate*100),4) AS "MTD Average Interest Rate",
-	ROUND(AVG(B.dti*100),4) AS "MTD Average dti"
-FROM Bank_loan_data B
-WHERE MONTH(B.issue_date) = 12
-GROUP BY B.loan_status;
+	`Loan Status`,
+	COUNT(Id) AS "MTD Total loan Application",
+	SUM(`Loan Amount`) "MTD Total Loan Disbursed",
+	ROUND(AVG(`Int Rate`*100),4) "MTD Average Interest Rate",
+	ROUND(AVG(DTI*100),4) "MTD Average dti"
+FROM financial_loan
+	WHERE MONTH(`Issue Date`) = 12
+	GROUP BY `Loan Status`;
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- PMTD Loan status grid view
 
-SELECT 
-	B.loan_status,
-	COUNT(B.id) AS "PMTD Total loan Application",
-	SUM (B.loan_amount) AS "PMTD Total Loan Disbursed",
-	ROUND(AVG(B.int_rate*100),4) AS "PMTD Average Interest Rate",
-	ROUND(AVG(B.dti*100),4) AS "PMTD Average dti"
-FROM Bank_loan_data B
-WHERE MONTH(B.issue_date) = 11
-GROUP BY B.loan_status;
+SELECT
+`Loan Status`,
+	COUNT(Id) AS "PMTD Total loan Application",
+	SUM(`Loan Amount`) "PMTD Total Loan Disbursed",
+	ROUND(AVG(`Int Rate`*100),4) "PMTD Average Interest Rate",
+	ROUND(AVG(DTI*100),4) "PMTD Average dti"
+FROM financial_loan
+	WHERE MONTH(`Issue Date`) = 11
+	GROUP BY `Loan Status`;
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
