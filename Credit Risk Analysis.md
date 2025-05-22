@@ -10,6 +10,7 @@ This project is focused on credit risk analysis using MySQL to analyze financial
 
 ## Data Analysis
 
-## Results and Findings 
+## Results and Findings
+
 ## Recommendation
 
