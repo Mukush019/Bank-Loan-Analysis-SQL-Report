@@ -9,7 +9,7 @@ This project is focused on credit risk analysis using MySQL to analyze financial
 [View Here](https://drive.google.com/file/d/1NOl-nRWsnT0l0uitDXp8yKLTpYz45P-1/view?usp=sharing) 
 
 ## Tools
-
+MySQL
 ## Data Cleaning
 
 ## Data Analysis
