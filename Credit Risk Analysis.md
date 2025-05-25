@@ -2,7 +2,7 @@
 ---
 ## Project Overview
 
-This project is focused on credit risk analysis using MySQL to analyze financial loan data. It provides insights into loan applications, disbursements, and risk metrics. By understanding loan portfolio performance, this project aims to help financial institutions manage risk.
+This project is focused on credit risk analysis using MySQL to analyze financial loan data. It provides insights into loan applications, disbursements, and risk metrics. This project aims to help financial institutions manage risk by understanding loan portfolio performance.
 
 ## Data Sources
 
