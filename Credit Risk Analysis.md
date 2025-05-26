@@ -24,7 +24,6 @@ This project analyzes a 2021 financial loan dataset to derive key performance in
 ## Tools
 - **MySQL**: Used for data storage, querying, and analysis.
 - **GitHub**: For version control and documentation of the project.
-MySQL
 ## Data Cleaning
 
 ## Data Analysis
