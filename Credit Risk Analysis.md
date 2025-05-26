@@ -2,7 +2,7 @@
 ---
 ## Project Overview
 
-This project is focused on credit risk analysis using MySQL to analyze financial loan data. It provides insights into loan applications, disbursements, and risk metrics. This project aims to help financial institutions manage risk by understanding loan portfolio performance.
+This project analyzes a 2021 financial loan dataset to derive key performance indicators (KPIs) and trends, enabling data-driven lending decisions. Using MySQL, it calculates total loan applications, disbursed amounts, repayment rates, interest rates, and debt-to-income (DTI) ratios, with segmentations by month, region, loan term, employment length, purpose, and home ownership. Designed for financial institutions and data analysts, the analysis distinguishes between good and bad loans to highlight risk factors. By identifying high-demand regions and seasonal patterns, the project supports optimized lending strategies and improved risk management. Custom SQL queries ensure efficient processing of large-scale financial data.
 
 ## Data Sources
 
