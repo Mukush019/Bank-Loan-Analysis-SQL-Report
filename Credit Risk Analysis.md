@@ -6,8 +6,21 @@ This project analyzes a 2021 financial loan dataset to derive key performance in
 
 ## Data Sources
 
-[View Here](https://drive.google.com/file/d/1NOl-nRWsnT0l0uitDXp8yKLTpYz45P-1/view?usp=sharing) 
+[View Here](https://drive.google.com/file/d/1NOl-nRWsnT0l0uitDXp8yKLTpYz45P-1/view?usp=sharing)
 
+**Key Columns**:
+  - `Id`: Unique identifier for each loan application.
+  - `Issue Date`: Date the loan was issued (converted from text to DATE format).
+  - `Loan Amount`: Amount disbursed for the loan.
+  - `Total Payment`: Amount repaid by the borrower.
+  - `Int Rate`: Interest rate of the loan.
+  - `DTI`: Debt-to-income ratio of the borrower.
+  - `Loan Status`: Status of the loan (e.g., Fully Paid, Current, Charged Off).
+  - `Address State`: State of the borrower's address.
+  - `Term`: Loan term (e.g., short-term or long-term).
+  - `Emp Length`: Employment length of the borrower.
+  - `Purpose`: Purpose of the loan (e.g., debt consolidation, home improvement).
+  - `Home Ownership`: Borrower's home ownership status (e.g., Rent, Own, Mortgage).
 ## Tools
 
 MySQL
