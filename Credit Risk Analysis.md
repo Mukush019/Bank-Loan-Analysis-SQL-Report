@@ -24,6 +24,14 @@ This project analyzes a 2021 financial loan dataset to derive key performance in
 - **MySQL**: Used for data storage, querying, and analysis.
 - **GitHub**: For version control and documentation of the project.
 ## Data Cleaning
+ - **Date Conversion**: The `Issue Date` column was converted from text format (`%d/%m/%Y`) to MySQL DATE format using:
+  ```sql
+  UPDATE financial_loan
+  SET `Issue Date` = STR_TO_DATE(`Issue Date`, '%d/%m/%Y');
+ ```
+ This ensured accurate date-based filtering for month-to-date (MTD) and prior month-to-date (PMTD) calculations.
+- **Data Integrity**: The dataset was assumed to be clean, with no additional steps for handling missing values or duplicates explicitly mentioned in the script.
+
 
 ## Data Analysis
 
