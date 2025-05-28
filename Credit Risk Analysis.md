@@ -22,7 +22,7 @@ This project analyzes a 2021 financial loan dataset to derive key performance in
   - `Home Ownership`: Borrower's home ownership status (e.g., Rent, Own, Mortgage).
 ## Tools
 - **MySQL**: Used for data storage, querying, and analysis.
-- **GitHub**: For version control and documentation of the project.
+- **GitHub**: This is for version control and project documentation.
 ## Data Cleaning
  - **Date Conversion**: The `Issue Date` column was converted from text format (`%d/%m/%Y`) to MySQL DATE format using:
   ```sql
