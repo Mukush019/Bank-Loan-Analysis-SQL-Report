@@ -37,5 +37,19 @@ This project analyzes a 2021 financial loan dataset to derive key performance in
 
 ## Results and Findings
 
+- **Loan Volume**: The dataset contains a significant number of loan applications in 2021, with specific counts for December (MTD) and November (PMTD), indicating seasonal trends in loan demand.
+
+- **Disbursement and Repayment**: Total disbursed amounts and repayments provide insights into lending scale and recovery rates. Good loans (Fully Paid or Current) dominate, but bad loans (Charged Off) represent a notable portion, highlighting risk exposure.
+
+- **Interest Rates and DTI**: Average interest rates and DTI ratios vary by month and loan status, with potential implications for borrower affordability and risk.
+
+### *Segmented Insights*:
+---
+- **Regional**: Certain states have higher loan volumes and disbursed amounts, suggesting geographic concentration of demand or risk.
+
+- **Term and Purpose**: Short-term loans and specific purposes (e.g., debt consolidation) may dominate disbursements, indicating borrower preferences.
+
+- **Employment and Ownership**: Longer employment durations and specific home ownership statuses (e.g., Mortgage) correlate with higher loan volumes.
+
 ## Recommendation
 
