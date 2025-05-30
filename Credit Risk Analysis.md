@@ -52,4 +52,22 @@ This project analyzes a 2021 financial loan dataset to derive key performance in
 - **Employment and Ownership**: Longer employment durations and specific home ownership statuses (e.g., Mortgage) correlate with higher loan volumes.
 
 ## Recommendation
+- **Risk Management**:
+  - Focus on reducing the percentage of bad loans by tightening credit assessment for high-risk states or borrower segments with high DTI ratios.
+  - Monitor interest rate trends to ensure competitive yet sustainable pricing.
+
+- **Targeted Lending**:
+  - Increase marketing efforts in high-demand states identified in the regional analysis.
+  - Tailor loan products to popular purposes (e.g., debt consolidation) and terms to attract more qualified borrowers.
+
+- **Seasonal Strategies**:
+  - Leverage monthly trends to anticipate peak loan demand periods (e.g., December) and allocate resources accordingly.
+
+- **Data Enhancement**:
+  - Incorporate additional data cleaning steps to handle potential missing or inconsistent data (e.g., null values in `Loan Status` or `Issue Date`).
+  - Include more granular borrower demographics (e.g., credit score, income) for deeper risk analysis.
+
+- **Visualization**:
+  - Use visualization tools (e.g., Tableau, Power BI) to create dashboards for stakeholders, highlighting KPIs like good/bad loan percentages and regional trends.
+
 
