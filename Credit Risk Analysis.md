@@ -1,4 +1,4 @@
-# Loan Analysis Report 
+# Loan Analysis Report. 
 ---
 
 ## Project Overview
