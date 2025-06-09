@@ -36,6 +36,7 @@ This project analyzes a 2021 financial loan dataset to derive key performance in
   SET `Issue Date` = STR_TO_DATE(`Issue Date`, '%d/%m/%Y');
  ```
  This ensured accurate date-based filtering for month-to-date (MTD) and prior month-to-date (PMTD) calculations.
+ 
 - **Data Integrity**: The dataset was assumed to be clean, with no additional steps for handling missing values or duplicates explicitly mentioned in the script.
 
 ## Data Analysis
