@@ -42,6 +42,7 @@ This project analyzes a 2021 financial loan dataset to derive key performance in
 ## Data Analysis
 
 
+
 ## Results and Findings
 
 - **Loan Volume**: The dataset contains a significant number of loan applications in 2021, with specific counts for December (MTD) and November (PMTD), indicating seasonal trends in loan demand.
