@@ -1,4 +1,4 @@
-# Loan Analysis Report
+# Credit Risk Analysis
 ---
 
 ## Project Overview
