@@ -1,5 +1,9 @@
 USE `bank_loan_ analysis`;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 SELECT * FROM financial_loan;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /*Rename Columns
 ï»¿Address State -> State
 Good Loan vs Bad Loan Group -> `Loan Group`
@@ -15,6 +19,7 @@ CHANGE COLUMN `Good Loan vs Bad Loan Group` `Loan Group` VARCHAR(200);
 ALTER TABLE financial_loan
 CHANGE COLUMN Term `Term (Months)` INT;
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /*
 Deleting redundant columns 
 - Good Loan vs Bad Loan Group(Copy)
@@ -26,7 +31,7 @@ Deleting redundant columns
 - Total Good Loans Disbursed
 - Total Good Loans Issued
 - Total Good Loans Repaid
-- Total Loan Disbured
+- Total Loan Disbursed
 - Total Payment
 - Dynamic Measure
 - Total Applications
@@ -55,14 +60,18 @@ ALTER TABLE financial_loan
 DROP COLUMN `Avearge DTI`,
 DROP COLUMN `Avearge Interest Rate`;
 
--- Pulling unique values to detect inconsitency
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Pulling unique values to detect inconsistency
 SELECT DISTINCT `Verification Status`
 FROM financial_loan;
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Ensuring consistency by changing source verified to verified
 UPDATE financial_loan
 SET `Verification Status` = 'Verified'
 WHERE `Verification Status` = 'Source Verified';
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /*
 Fix inconsistent columns in 
 -- Terms --> Remove months after number
@@ -71,6 +80,7 @@ Fix inconsistent columns in
 UPDATE financial_loan
 SET Term = TRIM(REPLACE(Term, 'months', ''));
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /*
 Add a column that has Emp Length in range format
 */
